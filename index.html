@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Portfolio website</title>
+</head>
+
+<body>
+<header>
+    <!-- Logo -->
+    <div class="logo">
+        <img src="./Images/DSA logo.png" alt="Data-Software Analysis Logo">
+        <div class="logo-text">
+            <h1>Data-Software Analysis</h1>
+            <span class="certified">ISO Certified</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <ul class="navlist">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <!-- Mobile menu icon -->
+    <div id="menu-icon" class="bx bx-menu"></div>
+</header>
+
+<style>
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: #111;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 30px;
+        z-index: 999;
+    }
+
+    /* Logo section */
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .logo img {
+        height: 55px;   /* Increased size */
+        width: auto;
+        object-fit: contain;
+    }
+
+    .logo-text h1 {
+        font-size: 20px;
+        font-weight: 600;
+        color: #fff;
+        margin: 0;
+    }
+
+    .logo-text .certified {
+        font-size: 13px;
+        font-weight: 500;
+        color: #00d9ff; /* Highlight ISO text */
+    }
+
+    /* Nav styling */
+    .navlist {
+        display: flex;
+        list-style: none;
+        gap: 25px;
+    }
+
+    .navlist li a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+    }
+
+    .navlist li a:hover {
+        color: #00d9ff;
+    }
+
+    /* Menu icon */
+    #menu-icon {
+        font-size: 28px;
+        color: white;
+        cursor: pointer;
+        display: none;
+    }
+
+    /* Mobile styles */
+    @media (max-width: 768px) {
+        .navlist {
+            position: absolute;
+            top: 75px;
+            right: 0;
+            background: #111;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            display: none;
+            padding: 15px 0;
+        }
+
+        .navlist.active {
+            display: flex;
+        }
+
+        #menu-icon {
+            display: block;
+        }
+
+        /* Adjust logo for small screens */
+        .logo img {
+            height: 45px;
+        }
+        .logo-text h1 {
+            font-size: 16px;
+        }
+        .logo-text .certified {
+            font-size: 12px;
+        }
+    }
+</style>
+
+<script>
+    const menuIcon = document.getElementById("menu-icon");
+    const navList = document.querySelector(".navlist");
+
+    menuIcon.onclick = () => {
+        navList.classList.toggle("active");
+        menuIcon.classList.toggle("bx-x"); // switch icon
+    };
+</script>
+
+
+    <section id="home" style="--i:1;" class="home">
+        <div class="home-content scroll-scale">
+            <h1>Hi! I'm Er. Rushikesh Kekane</h1>
+            <div class="change-text">
+                <h3>And I'm</h3>
+                <h3><span>Founder & CEO, Data-Software Analysis</span></h3>
+            </div><br>
+            <p>"Data-Software Analysis is a results-driven IT company based in Sinnar, Nashik, founded by a digital
+                creative professional with over 3 years of experience. We specialize in social media marketing, digital
+                marketing (SEO), website development, Android app development, and custom software solutions. As the
+                Founder & CEO, I lead a team dedicated to delivering innovative and scalable digital solutions that
+                drive business success. In addition to our services, we proudly offer internship programs to help
+                aspiring professionals gain real-world experience and grow in the IT industry."</p>
+
+            <div class="info-box">
+                <div class="email-info">
+                    <h5>Email:</h5>
+                    <span>
+                        <a href="mailto:services@data-softwareanalysis.com"
+                            style="color: inherit; text-decoration: none;">
+                            services@data-softwareanalysis.com
+                        </a>
+                    </span>
+                </div>
+            </div>
+
+
+            <div class="btn-box">
+                <a href="https://www.data-softwareanalysis.com"
+                    class="btn btn-outline-light btn-lg fw-bold text-uppercase px-4 py-2 shadow-sm" target="_blank"
+                    rel="noopener noreferrer">
+                    ← Visit Our Official Website
+                </a>
+            </div>
+
+
+
+
+            <div class="social-icons">
+                <a href="#"><i class="bx bxl-facebook"></i></a>
+                <a href="https://www.instagram.com/data_software_analysis/?hl=en"><i class="bx bxl-instagram"></i></a>
+                <a href="https://x.com/software930061"><i class="bx bxl-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/data-software-analysis-4a271a375/" target="_blank"
+                    rel="noopener noreferrer">
+                    <i class="bx bxl-linkedin"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="home-image scroll-scale">
+            <div class="img-box">
+                <img src="Images/man3.png" alt="">
+            </div>
+
+            <div class="liquid-shape">
+                <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="100%" id="blobSvg">
+                    <path id="blob" d="" fill="#12f7ff">
+                        <animate attributeName="d" dur="10000ms" repeatCount="indefinite"
+                            values="M449,309.5Q456,369,391,375Q326,381,288,411.5Q250,442,204.5,425Q159,408,137.5,367.5Q116,327,102.5,288.5Q89,250,80,198.5Q71,147,118,125Q165,103,207.5,73Q250,43,310,43Q370,43,384.5,103.5Q399,164,420.5,207Q442,250,449,309.5Z;
+                        M440,308Q451,366,393,381.5Q335,397,292.5,407.5Q250,418,197.5,424.5Q145,431,116.5,387Q88,343,70,296.5Q52,250,61,198Q70,146,112.5,115.5Q155,85,202.5,50Q250,15,290,63Q330,111,368,135.5Q406,160,417.5,205Q429,250,440,308Z;
+                        M448,308.5Q453,367,404,400Q355,433,302.5,452.5Q250,472,207.5,434.5Q165,397,116.5,376Q68,355,76.5,302.5Q85,250,81.5,200Q78,150,108,103Q138,56,194,46Q250,36,306.5,45Q363,54,405,95Q447,136,445,193Q443,250,448,308.5Z;">
+                        </animate>
+                    </path>
+                </svg>
+            </div>
+
+            <div class="liquid-shape">
+                <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="100%" id="blobSvg">
+                    <path id="blob" d="" fill="#12f7ff">
+                        <animate attributeName="d" dur="10000ms" repeatCount="indefinite"
+                            values="M449,309.5Q456,369,391,375Q326,381,288,411.5Q250,442,204.5,425Q159,408,137.5,367.5Q116,327,102.5,288.5Q89,250,80,198.5Q71,147,118,125Q165,103,207.5,73Q250,43,310,43Q370,43,384.5,103.5Q399,164,420.5,207Q442,250,449,309.5Z;
+                        M440,308Q451,366,393,381.5Q335,397,292.5,407.5Q250,418,197.5,424.5Q145,431,116.5,387Q88,343,70,296.5Q52,250,61,198Q70,146,112.5,115.5Q155,85,202.5,50Q250,15,290,63Q330,111,368,135.5Q406,160,417.5,205Q429,250,440,308Z;
+                        M448,308.5Q453,367,404,400Q355,433,302.5,452.5Q250,472,207.5,434.5Q165,397,116.5,376Q68,355,76.5,302.5Q85,250,81.5,200Q78,150,108,103Q138,56,194,46Q250,36,306.5,45Q363,54,405,95Q447,136,445,193Q443,250,448,308.5Z;">
+                        </animate>
+                    </path>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" style="--i:2;" id="about">
+        <div class="img-about scroll-scale">
+            <img src="Images/about-me-pic2.png" alt="">
+            <div class="info-about1">
+                <span>3+</span>
+                <p>Years of Experience</p>
+            </div>
+            <div class="info-about2">
+                <span>50+</span>
+                <p>Projects Completed</p>
+            </div>
+            <div class="info-about3">
+                <span>100+</span>
+                <p>Happy Clients</p>
+            </div>
+        </div>
+
+        <div class="about-content scroll-scale">
+            <span>Let me introduce myself</span>
+            <h2>About Me</h2>
+            <h3>A story of good</h3>
+            <p>As the Founder of Data-Software Analysis, I lead a dedicated team of innovators passionate about
+                delivering cutting-edge IT solutions that drive business growth and digital transformation. Our core
+                expertise spans web development, digital marketing, software development, and data analytics, enabling
+                businesses to stay competitive in today’s fast-evolving digital landscape. This portfolio highlights not
+                only our technical capabilities but also our commitment to creating exceptional user experiences—whether
+                it's a sleek landing page or a complex web application. Each project reflects our mission to turn
+                visionary ideas into scalable, results-driven solutions tailored to meet real-world needs.</p>
+            <div class="btn-box">
+                <a href="#" class="btn">Read More!</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" style="--i:3;" id="services">
+        <div class="main-text">
+            <span>What We can do for You</span>
+            <h2>Our Services</h2>
+        </div>
+      <div class="section-services">
+
+    <!-- Service 1 -->
+    <div class="service-box">
+        <i class='bx bxl-sketch service-icon'></i>
+        <h3>Creative Graphic Design</h3>
+        <p>Delivering impactful designs that strengthen brand identity with visually appealing and innovative concepts tailored to your business.</p>
+        <div class="btn-box service-btn">
+            <a href="https://www.data-softwareanalysis.com/service.html" class="btn">Read More</a>
+        </div>
+    </div>
+
+    <!-- Service 2 -->
+    <div class="service-box">
+        <i class='bx bxs-briefcase service-icon'></i>
+        <h3>Smart Marketing Solutions</h3>
+        <p>Driving business growth with strategic marketing campaigns designed to boost visibility, engage audiences, and achieve measurable results.</p>
+        <div class="btn-box service-btn">
+            <a href="https://www.data-softwareanalysis.com/service.html" class="btn">Read More</a>
+        </div>
+    </div>
+
+    <!-- Service 3 -->
+    <div class="service-box">
+        <i class='bx bx-code-alt service-icon'></i>
+        <h3>Custom Software Development</h3>
+        <p>Building scalable and user-friendly software solutions using modern technologies to improve performance, efficiency, and user experience.</p>
+        <div class="btn-box service-btn">
+            <a href="https://www.data-softwareanalysis.com/service.html" class="btn">Read More</a>
+        </div>
+    </div>
+
+</div>
+
+    </section>
+
+<section id="skills" class="skills">
+  <div class="container">
+    <!-- Section Header -->
+    <div class="main-text text-center mb-5">
+      <span class="tagline">Technical and Leadership</span>
+      <h2 class="title">My Skills</h2>
+    </div>
+
+    <div class="skill-main">
+      <!-- Engineer Skills Section -->
+     <div class="skill-left">
+  <h3>Engineer Skills (IT)</h3>
+
+  <div class="skill-bar">
+    <div class="info">
+      <p>Networking & Infrastructure</p>
+      <p>90%</p>
+    </div>
+    <div class="bar"><span style="width:90%"></span></div>
+  </div>
+
+  <div class="skill-bar">
+    <div class="info">
+      <p>Cloud Computing (AWS / Azure)</p>
+      <p>80%</p>
+    </div>
+    <div class="bar"><span style="width:80%"></span></div>
+  </div>
+
+  <div class="skill-bar">
+    <div class="info">
+      <p>Cybersecurity & Data Protection</p>
+      <p>75%</p>
+    </div>
+    <div class="bar"><span style="width:75%"></span></div>
+  </div>
+
+  <div class="skill-bar">
+    <div class="info">
+      <p>System Administration (Linux / Windows)</p>
+      <p>85%</p>
+    </div>
+    <div class="bar"><span style="width:85%"></span></div>
+  </div>
+
+  <div class="skill-bar">
+    <div class="info">
+      <p>IT Support & Troubleshooting</p>
+      <p>95%</p>
+    </div>
+    <div class="bar"><span style="width:95%"></span></div>
+  </div>
+</div>
+
+
+      <!-- Founder & CEO Skills Section -->
+  <div class="skill-right">
+  <h3>Founder & CEO Skills</h3>
+  <div class="proffessional">
+    
+    <div class="box">
+      <div class="circle"><span>95%</span></div>
+      <small>Visionary Leadership</small>
+    </div>
+
+    <div class="box">
+      <div class="circle"><span>90%</span></div>
+      <small>Strategic Decision-Making</small>
+    </div>
+
+    <div class="box">
+      <div class="circle"><span>85%</span></div>
+      <small>Business Development</small>
+    </div>
+
+    <div class="box">
+      <div class="circle"><span>80%</span></div>
+      <small>Project & Team Management</small>
+    </div>
+
+    <div class="box">
+      <div class="circle"><span>75%</span></div>
+      <small>Financial Planning</small>
+    </div>
+
+    <div class="box">
+      <div class="circle"><span>85%</span></div>
+      <small>Innovation & Growth Strategy</small>
+    </div>
+
+  </div>
+</div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+/* Base */
+.skills {
+  padding: 80px 20px;
+  background: #0d0d0d;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+.main-text .tagline {
+  font-size: 14px;
+  color: #48dbfb;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.main-text .title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Layout */
+.skill-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+.skill-left h3,
+.skill-right h3 {
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+/* Progress Bars */
+.skill-bar {
+  margin-bottom: 20px;
+}
+.skill-bar .info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+.skill-bar .bar {
+  background: #2c2c2c;
+  border-radius: 6px;
+  height: 10px;
+  overflow: hidden;
+}
+.skill-bar .bar span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #48dbfb, #ff6b6b);
+  border-radius: 6px;
+}
+
+/* Circles */
+.skill-right {
+  text-align: center;
+}
+.proffessional {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.box {
+  width: 140px;
+}
+.circle {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  border: 8px solid #333;
+  border-top-color: #48dbfb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 20px;
+  color: #48dbfb;
+  background: #1a1a1a;
+}
+.box small {
+  display: block;
+  margin-top: 5px;
+  font-size: 13px;
+  color: #ccc;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skill-main {
+    grid-template-columns: 1fr;
+  }
+  .main-text .title {
+    font-size: 28px;
+  }
+}
+</style>
+
+
+
+    <section id="portfolio" style="--i:5;" class="portfolio">
+        <div class="main-text scroll-scale">
+            <span>What I will do for you</span>
+            <h2>Latest Projects</h2>
+        </div>
+
+        <div class="container">
+            <div class="portfolio-gallery scroll-bottom">
+                <div class="port-box">
+                    <img src="Images/574c848eb9069.jpeg" alt="">
+                </div>
+
+                <div class="port-box">
+                    <img class="th2" src="Images/image10.png" alt="">
+                </div>
+
+                <div class="port-box">
+                    <img src="Images/personal-portfolio-website.jpg" alt="">
+                </div>
+
+                <div class="port-box">
+                    <img src="Images/zyro-pre-made-website-templates.png" alt="">
+                </div>
+
+                <div class="port-box">
+                    <img src="Images/split-screen-web-design-portfolio-template.png" alt="">
+                </div>
+
+                <div class="port-box">
+                    <img src="Images/f972024105052829cf425522a4ab27df.jpg" alt="">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" style="--i:6;" class="contact">
+        <div class="main-text scroll-scale">
+            <span>Ask me Questions</span>
+            <h2>Inquery Now</h2>
+        </div>
+
+        <form id="contactForm" action="https://formsubmit.co/ajax/datasoftwareanalysis@gmail.com" method="POST"
+            class="scroll-bottom">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="text" name="address" placeholder="Your Address">
+            <input type="text" name="phone" placeholder="Phone Number">
+            <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+
+            <!-- Hidden Inputs -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="box">
+            <input type="hidden" name="_subject" value="New Contact Form Submission">
+
+            <div class="btn-box formBtn">
+                <button type="submit" class="btn">Send Message</button>
+            </div>
+        </form>
+
+        <!-- Thank You Message -->
+        <div id="thankYouMsg" style="display:none; color: green; font-size: 18px; margin-top: 20px;">
+            ✅ Thank you for submitting your message!
+        </div>
+    </section>
+
+    <!-- JavaScript to handle AJAX submission -->
+    <script>
+        const form = document.getElementById("contactForm");
+        const thankYouMsg = document.getElementById("thankYouMsg");
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const formData = new FormData(form);
+
+            fetch(form.action, {
+                method: "POST",
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+                .then(response => {
+                    if (response.ok) {
+                        form.reset();
+                        thankYouMsg.style.display = "block";
+                        // Optionally auto-hide after 5 seconds
+                        setTimeout(() => {
+                            thankYouMsg.style.display = "none";
+                        }, 5000);
+                    } else {
+                        response.json().then(data => {
+                            alert("Form error: " + (data.message || "Please try again."));
+                        });
+                    }
+                })
+                .catch(error => {
+                    alert("Error: " + error.message);
+                });
+        });
+    </script>
+
+
+
+
+<footer>
+    <div class="footer-content">
+        <!-- Company Logo -->
+        <div class="footer-logo">
+            <img src="./Images/DSA logo.png" alt="Data-Software Analysis Logo">
+        </div>
+
+        <!-- Copyright -->
+        <p class="scroll-scale">
+            Copyright &copy; 2025 by 
+            <strong>Data-Software Analysis</strong> || All Rights Reserved
+        </p>
+
+        <!-- ISO Certified Stamp -->
+        <div class="iso-cert">
+            <img src="./Images/iso_stamp.png" alt="ISO Certified Stamp">
+            <span>ISO Certified</span>
+        </div>
+
+        <!-- Social & Back to Top -->
+        <div class="footer-icons">
+            <!-- WhatsApp Button -->
+            <a href="https://wa.me/917219080839" target="_blank" title="Chat on WhatsApp">
+                <i class='bx bxl-whatsapp'></i>
+            </a>
+            <!-- Back to Top -->
+            <a href="#home" title="Back to Top">
+                <i class="bx bx-up-arrow-alt"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<style>
+    footer {
+        background: #111;
+        color: #fff;
+        padding: 20px 30px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+    }
+
+    /* Company Logo */
+    .footer-logo img {
+        height: 45px;
+        width: auto;
+        object-fit: contain;
+    }
+
+    /* ISO Stamp */
+    .iso-cert {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .iso-cert img {
+        height: 35px;
+        width: auto;
+        object-fit: contain;
+    }
+
+    .iso-cert span {
+        font-size: 13px;
+        color: #00d9ff;
+        font-weight: 500;
+    }
+
+    /* Copyright */
+    .footer-content p {
+        margin: 0;
+        font-size: 14px;
+    }
+
+    /* Footer Icons */
+    .footer-icons {
+        display: flex;
+        gap: 15px;
+        font-size: 22px;
+    }
+
+    .footer-icons a {
+        color: #25D366;
+        transition: transform 0.3s;
+    }
+
+    .footer-icons a:hover {
+        transform: scale(1.2);
+    }
+
+    .footer-icons a:last-child {
+        color: #00d9ff;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+        .footer-content {
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-logo img {
+            height: 38px;
+        }
+
+        .iso-cert img {
+            height: 30px;
+        }
+    }
+</style>
+
+
+<style>
+    footer {
+        background: #111;
+        color: #fff;
+        padding: 15px 30px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .footer-content p {
+        margin: 0;
+        font-size: 14px;
+    }
+
+    /* ISO Stamp */
+    .iso-cert {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .iso-cert img {
+        height: 35px;
+        width: auto;
+        object-fit: contain;
+    }
+
+    .iso-cert span {
+        font-size: 13px;
+        color: #00d9ff;
+        font-weight: 500;
+    }
+
+    /* Footer Icons */
+    .footer-icons {
+        display: flex;
+        gap: 15px;
+        font-size: 22px;
+    }
+
+    .footer-icons a {
+        color: #25D366;
+        transition: transform 0.3s;
+    }
+
+    .footer-icons a:hover {
+        transform: scale(1.2);
+    }
+
+    .footer-icons a:last-child {
+        color: #00d9ff;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+        .footer-content {
+            flex-direction: column;
+            gap: 10px;
+        }
+        .iso-cert img {
+            height: 30px;
+        }
+    }
+</style>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
