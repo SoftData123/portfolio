@@ -10,147 +10,151 @@
 </head>
 
 <body>
-<header>
-    <!-- Logo -->
-    <div class="logo">
-        <img src="./Images/DSA logo.png" alt="Data-Software Analysis Logo">
-        <div class="logo-text">
-            <h1>Data-Software Analysis</h1>
-            <span class="certified">ISO Certified</span>
+    <header>
+        <!-- Logo -->
+        <div class="logo">
+            <img src="./Images/DSA logo.png" alt="Data-Software Analysis Logo">
+            <div class="logo-text">
+                <h1>Data-Software Analysis</h1>
+                <span class="certified">ISO Certified</span>
+            </div>
         </div>
-    </div>
 
-    <!-- Navigation -->
-    <ul class="navlist">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
+        <!-- Navigation -->
+        <ul class="navlist">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
 
-    <!-- Mobile menu icon -->
-    <div id="menu-icon" class="bx bx-menu"></div>
-</header>
+        <!-- Mobile menu icon -->
+        <div id="menu-icon" class="bx bx-menu"></div>
+    </header>
 
-<style>
-    /* Reset */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    header {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        background: #111;
-        color: white;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 12px 30px;
-        z-index: 999;
-    }
-
-    /* Logo section */
-    .logo {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-    }
-
-    .logo img {
-        height: 55px;   /* Increased size */
-        width: auto;
-        object-fit: contain;
-    }
-
-    .logo-text h1 {
-        font-size: 20px;
-        font-weight: 600;
-        color: #fff;
-        margin: 0;
-    }
-
-    .logo-text .certified {
-        font-size: 13px;
-        font-weight: 500;
-        color: #00d9ff; /* Highlight ISO text */
-    }
-
-    /* Nav styling */
-    .navlist {
-        display: flex;
-        list-style: none;
-        gap: 25px;
-    }
-
-    .navlist li a {
-        color: white;
-        text-decoration: none;
-        font-weight: 500;
-        transition: color 0.3s;
-    }
-
-    .navlist li a:hover {
-        color: #00d9ff;
-    }
-
-    /* Menu icon */
-    #menu-icon {
-        font-size: 28px;
-        color: white;
-        cursor: pointer;
-        display: none;
-    }
-
-    /* Mobile styles */
-    @media (max-width: 768px) {
-        .navlist {
-            position: absolute;
-            top: 75px;
-            right: 0;
-            background: #111;
+        header {
+            position: fixed;
+            top: 0;
             width: 100%;
-            flex-direction: column;
-            align-items: center;
-            display: none;
-            padding: 15px 0;
-        }
-
-        .navlist.active {
+            background: #111;
+            color: white;
             display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 30px;
+            z-index: 999;
         }
 
-        #menu-icon {
-            display: block;
+        /* Logo section */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
 
-        /* Adjust logo for small screens */
         .logo img {
-            height: 45px;
+            height: 55px;
+            /* Increased size */
+            width: auto;
+            object-fit: contain;
         }
+
         .logo-text h1 {
-            font-size: 16px;
+            font-size: 20px;
+            font-weight: 600;
+            color: #fff;
+            margin: 0;
         }
+
         .logo-text .certified {
-            font-size: 12px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #00d9ff;
+            /* Highlight ISO text */
         }
-    }
-</style>
 
-<script>
-    const menuIcon = document.getElementById("menu-icon");
-    const navList = document.querySelector(".navlist");
+        /* Nav styling */
+        .navlist {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
 
-    menuIcon.onclick = () => {
-        navList.classList.toggle("active");
-        menuIcon.classList.toggle("bx-x"); // switch icon
-    };
-</script>
+        .navlist li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .navlist li a:hover {
+            color: #00d9ff;
+        }
+
+        /* Menu icon */
+        #menu-icon {
+            font-size: 28px;
+            color: white;
+            cursor: pointer;
+            display: none;
+        }
+
+        /* Mobile styles */
+        @media (max-width: 768px) {
+            .navlist {
+                position: absolute;
+                top: 75px;
+                right: 0;
+                background: #111;
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                display: none;
+                padding: 15px 0;
+            }
+
+            .navlist.active {
+                display: flex;
+            }
+
+            #menu-icon {
+                display: block;
+            }
+
+            /* Adjust logo for small screens */
+            .logo img {
+                height: 45px;
+            }
+
+            .logo-text h1 {
+                font-size: 16px;
+            }
+
+            .logo-text .certified {
+                font-size: 12px;
+            }
+        }
+    </style>
+
+    <script>
+        const menuIcon = document.getElementById("menu-icon");
+        const navList = document.querySelector(".navlist");
+
+        menuIcon.onclick = () => {
+            navList.classList.toggle("active");
+            menuIcon.classList.toggle("bx-x"); // switch icon
+        };
+    </script>
 
 
     <section id="home" style="--i:1;" class="home">
@@ -204,7 +208,7 @@
 
         <div class="home-image scroll-scale">
             <div class="img-box">
-                <img src="Images/man3.png" alt="">
+                <img src="Images/images_me.png" alt="">
             </div>
 
             <div class="liquid-shape">
@@ -237,20 +241,85 @@
 
     <section class="about" style="--i:2;" id="about">
         <div class="img-about scroll-scale">
-            <img src="Images/about-me-pic2.png" alt="">
-            <div class="info-about1">
+            <img src="Images/images_me.png" alt="About Me">
+
+            <div class="info-about info-about1">
                 <span>3+</span>
                 <p>Years of Experience</p>
             </div>
-            <div class="info-about2">
+
+            <div class="info-about info-about2">
                 <span>50+</span>
                 <p>Projects Completed</p>
             </div>
-            <div class="info-about3">
+
+            <div class="info-about info-about3">
                 <span>100+</span>
                 <p>Happy Clients</p>
             </div>
         </div>
+        <style>
+            .img-about {
+                position: relative;
+                display: inline-block;
+                text-align: center;
+            }
+
+            .img-about img {
+                width: 280px;
+                /* adjust as needed */
+                border-radius: 10px;
+                position: relative;
+                z-index: 1;
+            }
+
+            .info-about {
+                position: absolute;
+                background: #101820;
+                color: #fff;
+                padding: 12px 18px;
+                border-radius: 50%;
+                text-align: center;
+                box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.5);
+                transition: transform 0.3s ease;
+            }
+
+            .info-about:hover {
+                transform: scale(1.1);
+            }
+
+            .info-about span {
+                display: block;
+                font-size: 20px;
+                font-weight: bold;
+                color: #00e5ff;
+            }
+
+            .info-about p {
+                font-size: 12px;
+                margin: 0;
+                color: #ddd;
+            }
+
+            /* Positioning of each badge */
+            .info-about1 {
+                top: 20%;
+                left: -80px;
+                /* left side */
+            }
+
+            .info-about2 {
+                top: 10%;
+                right: -90px;
+                /* top-right */
+            }
+
+            .info-about3 {
+                bottom: 15%;
+                right: -70px;
+                /* bottom-right */
+            }
+        </style>
 
         <div class="about-content scroll-scale">
             <span>Let me introduce myself</span>
@@ -274,240 +343,254 @@
             <span>What We can do for You</span>
             <h2>Our Services</h2>
         </div>
-      <div class="section-services">
+        <div class="section-services">
 
-    <!-- Service 1 -->
-    <div class="service-box">
-        <i class='bx bxl-sketch service-icon'></i>
-        <h3>Creative Graphic Design</h3>
-        <p>Delivering impactful designs that strengthen brand identity with visually appealing and innovative concepts tailored to your business.</p>
-        <div class="btn-box service-btn">
-            <a href="https://www.data-softwareanalysis.com/service.html" class="btn">Read More</a>
+            <!-- Service 1 -->
+            <div class="service-box">
+                <i class='bx bxl-sketch service-icon'></i>
+                <h3>Creative Graphic Design</h3>
+                <p>Delivering impactful designs that strengthen brand identity with visually appealing and innovative
+                    concepts tailored to your business.</p>
+                <div class="btn-box service-btn">
+                    <a href="https://www.data-softwareanalysis.com/service.html" class="btn">Read More</a>
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="service-box">
+                <i class='bx bxs-briefcase service-icon'></i>
+                <h3>Smart Marketing Solutions</h3>
+                <p>Driving business growth with strategic marketing campaigns designed to boost visibility, engage
+                    audiences, and achieve measurable results.</p>
+                <div class="btn-box service-btn">
+                    <a href="https://www.data-softwareanalysis.com/service.html" class="btn">Read More</a>
+                </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="service-box">
+                <i class='bx bx-code-alt service-icon'></i>
+                <h3>Custom Software Development</h3>
+                <p>Building scalable and user-friendly software solutions using modern technologies to improve
+                    performance, efficiency, and user experience.</p>
+                <div class="btn-box service-btn">
+                    <a href="https://www.data-softwareanalysis.com/service.html" class="btn">Read More</a>
+                </div>
+            </div>
+
         </div>
-    </div>
-
-    <!-- Service 2 -->
-    <div class="service-box">
-        <i class='bx bxs-briefcase service-icon'></i>
-        <h3>Smart Marketing Solutions</h3>
-        <p>Driving business growth with strategic marketing campaigns designed to boost visibility, engage audiences, and achieve measurable results.</p>
-        <div class="btn-box service-btn">
-            <a href="https://www.data-softwareanalysis.com/service.html" class="btn">Read More</a>
-        </div>
-    </div>
-
-    <!-- Service 3 -->
-    <div class="service-box">
-        <i class='bx bx-code-alt service-icon'></i>
-        <h3>Custom Software Development</h3>
-        <p>Building scalable and user-friendly software solutions using modern technologies to improve performance, efficiency, and user experience.</p>
-        <div class="btn-box service-btn">
-            <a href="https://www.data-softwareanalysis.com/service.html" class="btn">Read More</a>
-        </div>
-    </div>
-
-</div>
 
     </section>
 
-<section id="skills" class="skills">
-  <div class="container">
-    <!-- Section Header -->
-    <div class="main-text text-center mb-5">
-      <span class="tagline">Technical and Leadership</span>
-      <h2 class="title">My Skills</h2>
-    </div>
+    <section id="skills" class="skills">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="main-text text-center mb-5">
+                <span class="tagline">Technical and Leadership</span>
+                <h2 class="title">My Skills</h2>
+            </div>
 
-    <div class="skill-main">
-      <!-- Engineer Skills Section -->
-     <div class="skill-left">
-  <h3>Engineer Skills (IT)</h3>
+            <div class="skill-main">
+                <!-- Engineer Skills Section -->
+                <div class="skill-left">
+                    <h3>Engineer Skills (IT)</h3>
 
-  <div class="skill-bar">
-    <div class="info">
-      <p>Networking & Infrastructure</p>
-      <p>90%</p>
-    </div>
-    <div class="bar"><span style="width:90%"></span></div>
-  </div>
+                    <div class="skill-bar">
+                        <div class="info">
+                            <p>Networking & Infrastructure</p>
+                            <p>90%</p>
+                        </div>
+                        <div class="bar"><span style="width:90%"></span></div>
+                    </div>
 
-  <div class="skill-bar">
-    <div class="info">
-      <p>Cloud Computing (AWS / Azure)</p>
-      <p>80%</p>
-    </div>
-    <div class="bar"><span style="width:80%"></span></div>
-  </div>
+                    <div class="skill-bar">
+                        <div class="info">
+                            <p>Cloud Computing (AWS / Azure)</p>
+                            <p>80%</p>
+                        </div>
+                        <div class="bar"><span style="width:80%"></span></div>
+                    </div>
 
-  <div class="skill-bar">
-    <div class="info">
-      <p>Cybersecurity & Data Protection</p>
-      <p>75%</p>
-    </div>
-    <div class="bar"><span style="width:75%"></span></div>
-  </div>
+                    <div class="skill-bar">
+                        <div class="info">
+                            <p>Cybersecurity & Data Protection</p>
+                            <p>75%</p>
+                        </div>
+                        <div class="bar"><span style="width:75%"></span></div>
+                    </div>
 
-  <div class="skill-bar">
-    <div class="info">
-      <p>System Administration (Linux / Windows)</p>
-      <p>85%</p>
-    </div>
-    <div class="bar"><span style="width:85%"></span></div>
-  </div>
+                    <div class="skill-bar">
+                        <div class="info">
+                            <p>System Administration (Linux / Windows)</p>
+                            <p>85%</p>
+                        </div>
+                        <div class="bar"><span style="width:85%"></span></div>
+                    </div>
 
-  <div class="skill-bar">
-    <div class="info">
-      <p>IT Support & Troubleshooting</p>
-      <p>95%</p>
-    </div>
-    <div class="bar"><span style="width:95%"></span></div>
-  </div>
-</div>
+                    <div class="skill-bar">
+                        <div class="info">
+                            <p>IT Support & Troubleshooting</p>
+                            <p>95%</p>
+                        </div>
+                        <div class="bar"><span style="width:95%"></span></div>
+                    </div>
+                </div>
 
 
-      <!-- Founder & CEO Skills Section -->
-  <div class="skill-right">
-  <h3>Founder & CEO Skills</h3>
-  <div class="proffessional">
-    
-    <div class="box">
-      <div class="circle"><span>95%</span></div>
-      <small>Visionary Leadership</small>
-    </div>
+                <!-- Founder & CEO Skills Section -->
+                <div class="skill-right">
+                    <h3>Founder & CEO Skills</h3>
+                    <div class="proffessional">
 
-    <div class="box">
-      <div class="circle"><span>90%</span></div>
-      <small>Strategic Decision-Making</small>
-    </div>
+                        <div class="box">
+                            <div class="circle"><span>95%</span></div>
+                            <small>Visionary Leadership</small>
+                        </div>
 
-    <div class="box">
-      <div class="circle"><span>85%</span></div>
-      <small>Business Development</small>
-    </div>
+                        <div class="box">
+                            <div class="circle"><span>90%</span></div>
+                            <small>Strategic Decision-Making</small>
+                        </div>
 
-    <div class="box">
-      <div class="circle"><span>80%</span></div>
-      <small>Project & Team Management</small>
-    </div>
+                        <div class="box">
+                            <div class="circle"><span>85%</span></div>
+                            <small>Business Development</small>
+                        </div>
 
-    <div class="box">
-      <div class="circle"><span>75%</span></div>
-      <small>Financial Planning</small>
-    </div>
+                        <div class="box">
+                            <div class="circle"><span>80%</span></div>
+                            <small>Project & Team Management</small>
+                        </div>
 
-    <div class="box">
-      <div class="circle"><span>85%</span></div>
-      <small>Innovation & Growth Strategy</small>
-    </div>
+                        <div class="box">
+                            <div class="circle"><span>75%</span></div>
+                            <small>Financial Planning</small>
+                        </div>
 
-  </div>
-</div>
+                        <div class="box">
+                            <div class="circle"><span>85%</span></div>
+                            <small>Innovation & Growth Strategy</small>
+                        </div>
 
-    </div>
-  </div>
-</section>
+                    </div>
+                </div>
 
-<style>
-/* Base */
-.skills {
-  padding: 80px 20px;
-  background: #0d0d0d;
-  color: #fff;
-  font-family: "Poppins", sans-serif;
-}
-.main-text .tagline {
-  font-size: 14px;
-  color: #48dbfb;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-weight: 600;
-}
-.main-text .title {
-  font-size: 36px;
-  font-weight: bold;
-  margin-top: 10px;
-}
+            </div>
+        </div>
+    </section>
 
-/* Layout */
-.skill-main {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-}
-.skill-left h3,
-.skill-right h3 {
-  margin-bottom: 30px;
-  font-weight: 600;
-}
+    <style>
+        /* Base */
+        .skills {
+            padding: 80px 20px;
+            background: #0d0d0d;
+            color: #fff;
+            font-family: "Poppins", sans-serif;
+        }
 
-/* Progress Bars */
-.skill-bar {
-  margin-bottom: 20px;
-}
-.skill-bar .info {
-  display: flex;
-  justify-content: space-between;
-  font-size: 14px;
-  margin-bottom: 6px;
-}
-.skill-bar .bar {
-  background: #2c2c2c;
-  border-radius: 6px;
-  height: 10px;
-  overflow: hidden;
-}
-.skill-bar .bar span {
-  display: block;
-  height: 100%;
-  background: linear-gradient(90deg, #48dbfb, #ff6b6b);
-  border-radius: 6px;
-}
+        .main-text .tagline {
+            font-size: 14px;
+            color: #48dbfb;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
 
-/* Circles */
-.skill-right {
-  text-align: center;
-}
-.proffessional {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-.box {
-  width: 140px;
-}
-.circle {
-  width: 100px;
-  height: 100px;
-  margin: 0 auto 10px;
-  border-radius: 50%;
-  border: 8px solid #333;
-  border-top-color: #48dbfb;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  font-size: 20px;
-  color: #48dbfb;
-  background: #1a1a1a;
-}
-.box small {
-  display: block;
-  margin-top: 5px;
-  font-size: 13px;
-  color: #ccc;
-}
+        .main-text .title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .skill-main {
-    grid-template-columns: 1fr;
-  }
-  .main-text .title {
-    font-size: 28px;
-  }
-}
-</style>
+        /* Layout */
+        .skill-main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .skill-left h3,
+        .skill-right h3 {
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        /* Progress Bars */
+        .skill-bar {
+            margin-bottom: 20px;
+        }
+
+        .skill-bar .info {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            margin-bottom: 6px;
+        }
+
+        .skill-bar .bar {
+            background: #2c2c2c;
+            border-radius: 6px;
+            height: 10px;
+            overflow: hidden;
+        }
+
+        .skill-bar .bar span {
+            display: block;
+            height: 100%;
+            background: linear-gradient(90deg, #48dbfb, #ff6b6b);
+            border-radius: 6px;
+        }
+
+        /* Circles */
+        .skill-right {
+            text-align: center;
+        }
+
+        .proffessional {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .box {
+            width: 140px;
+        }
+
+        .circle {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 10px;
+            border-radius: 50%;
+            border: 8px solid #333;
+            border-top-color: #48dbfb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 20px;
+            color: #48dbfb;
+            background: #1a1a1a;
+        }
+
+        .box small {
+            display: block;
+            margin-top: 5px;
+            font-size: 13px;
+            color: #ccc;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .skill-main {
+                grid-template-columns: 1fr;
+            }
+
+            .main-text .title {
+                font-size: 28px;
+            }
+        }
+    </style>
 
 
 
@@ -617,202 +700,203 @@
 
 
 
-<footer>
-    <div class="footer-content">
-        <!-- Company Logo -->
-        <div class="footer-logo">
-            <img src="./Images/DSA logo.png" alt="Data-Software Analysis Logo">
+    <footer>
+        <div class="footer-content">
+            <!-- Company Logo -->
+            <div class="footer-logo">
+                <img src="./Images/DSA logo.png" alt="Data-Software Analysis Logo">
+            </div>
+
+            <!-- Copyright -->
+            <p class="scroll-scale">
+                Copyright &copy; 2025 by
+                <strong>Data-Software Analysis</strong> || All Rights Reserved
+            </p>
+
+            <!-- ISO Certified Stamp -->
+            <div class="iso-cert">
+                <img src="./Images/iso_stamp.png" alt="ISO Certified Stamp">
+                <span>ISO Certified</span>
+            </div>
+
+            <!-- Social & Back to Top -->
+            <div class="footer-icons">
+                <!-- WhatsApp Button -->
+                <a href="https://wa.me/917219080839" target="_blank" title="Chat on WhatsApp">
+                    <i class='bx bxl-whatsapp'></i>
+                </a>
+                <!-- Back to Top -->
+                <a href="#home" title="Back to Top">
+                    <i class="bx bx-up-arrow-alt"></i>
+                </a>
+            </div>
         </div>
+    </footer>
 
-        <!-- Copyright -->
-        <p class="scroll-scale">
-            Copyright &copy; 2025 by 
-            <strong>Data-Software Analysis</strong> || All Rights Reserved
-        </p>
-
-        <!-- ISO Certified Stamp -->
-        <div class="iso-cert">
-            <img src="./Images/iso_stamp.png" alt="ISO Certified Stamp">
-            <span>ISO Certified</span>
-        </div>
-
-        <!-- Social & Back to Top -->
-        <div class="footer-icons">
-            <!-- WhatsApp Button -->
-            <a href="https://wa.me/917219080839" target="_blank" title="Chat on WhatsApp">
-                <i class='bx bxl-whatsapp'></i>
-            </a>
-            <!-- Back to Top -->
-            <a href="#home" title="Back to Top">
-                <i class="bx bx-up-arrow-alt"></i>
-            </a>
-        </div>
-    </div>
-</footer>
-
-<style>
-    footer {
-        background: #111;
-        color: #fff;
-        padding: 20px 30px;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .footer-content {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        gap: 25px;
-    }
-
-    /* Company Logo */
-    .footer-logo img {
-        height: 45px;
-        width: auto;
-        object-fit: contain;
-    }
-
-    /* ISO Stamp */
-    .iso-cert {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
-
-    .iso-cert img {
-        height: 35px;
-        width: auto;
-        object-fit: contain;
-    }
-
-    .iso-cert span {
-        font-size: 13px;
-        color: #00d9ff;
-        font-weight: 500;
-    }
-
-    /* Copyright */
-    .footer-content p {
-        margin: 0;
-        font-size: 14px;
-    }
-
-    /* Footer Icons */
-    .footer-icons {
-        display: flex;
-        gap: 15px;
-        font-size: 22px;
-    }
-
-    .footer-icons a {
-        color: #25D366;
-        transition: transform 0.3s;
-    }
-
-    .footer-icons a:hover {
-        transform: scale(1.2);
-    }
-
-    .footer-icons a:last-child {
-        color: #00d9ff;
-    }
-
-    /* Responsive */
-    @media (max-width: 600px) {
-        .footer-content {
-            flex-direction: column;
-            gap: 12px;
+    <style>
+        footer {
+            background: #111;
+            color: #fff;
+            padding: 20px 30px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+        }
+
+        /* Company Logo */
         .footer-logo img {
-            height: 38px;
+            height: 45px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        /* ISO Stamp */
+        .iso-cert {
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .iso-cert img {
-            height: 30px;
+            height: 35px;
+            width: auto;
+            object-fit: contain;
         }
-    }
-</style>
+
+        .iso-cert span {
+            font-size: 13px;
+            color: #00d9ff;
+            font-weight: 500;
+        }
+
+        /* Copyright */
+        .footer-content p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        /* Footer Icons */
+        .footer-icons {
+            display: flex;
+            gap: 15px;
+            font-size: 22px;
+        }
+
+        .footer-icons a {
+            color: #25D366;
+            transition: transform 0.3s;
+        }
+
+        .footer-icons a:hover {
+            transform: scale(1.2);
+        }
+
+        .footer-icons a:last-child {
+            color: #00d9ff;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .footer-content {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .footer-logo img {
+                height: 38px;
+            }
+
+            .iso-cert img {
+                height: 30px;
+            }
+        }
+    </style>
 
 
-<style>
-    footer {
-        background: #111;
-        color: #fff;
-        padding: 15px 30px;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+    <style>
+        footer {
+            background: #111;
+            color: #fff;
+            padding: 15px 30px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-    .footer-content {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .footer-content p {
-        margin: 0;
-        font-size: 14px;
-    }
-
-    /* ISO Stamp */
-    .iso-cert {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
-
-    .iso-cert img {
-        height: 35px;
-        width: auto;
-        object-fit: contain;
-    }
-
-    .iso-cert span {
-        font-size: 13px;
-        color: #00d9ff;
-        font-weight: 500;
-    }
-
-    /* Footer Icons */
-    .footer-icons {
-        display: flex;
-        gap: 15px;
-        font-size: 22px;
-    }
-
-    .footer-icons a {
-        color: #25D366;
-        transition: transform 0.3s;
-    }
-
-    .footer-icons a:hover {
-        transform: scale(1.2);
-    }
-
-    .footer-icons a:last-child {
-        color: #00d9ff;
-    }
-
-    /* Responsive */
-    @media (max-width: 600px) {
         .footer-content {
-            flex-direction: column;
-            gap: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
         }
+
+        .footer-content p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        /* ISO Stamp */
+        .iso-cert {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
         .iso-cert img {
-            height: 30px;
+            height: 35px;
+            width: auto;
+            object-fit: contain;
         }
-    }
-</style>
+
+        .iso-cert span {
+            font-size: 13px;
+            color: #00d9ff;
+            font-weight: 500;
+        }
+
+        /* Footer Icons */
+        .footer-icons {
+            display: flex;
+            gap: 15px;
+            font-size: 22px;
+        }
+
+        .footer-icons a {
+            color: #25D366;
+            transition: transform 0.3s;
+        }
+
+        .footer-icons a:hover {
+            transform: scale(1.2);
+        }
+
+        .footer-icons a:last-child {
+            color: #00d9ff;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .footer-content {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .iso-cert img {
+                height: 30px;
+            }
+        }
+    </style>
 
 
     <script src="main.js"></script>
